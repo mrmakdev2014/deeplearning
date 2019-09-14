@@ -23,12 +23,12 @@ my_input  = np.array([[3,2],[6,6],
 
 my_output = [0,1,0,1,0,1]
 
-""" svm.SVC  = Support Vector Classfication  """
-my_model = svm.SVC(kernel='linear' ,C=1.0)
+""" svm.SVR  = Support Vector Regression  """
+my_model = svm.SVR(kernel='linear' ,C=1.0)
 my_model.fit(my_input , my_output)
 
-print ("SVC predicate [0.5,0.8] : " , my_model.predict([[0.5,0.8]]))
-print ("SVC predicate [8.5,10] : " , my_model.predict([[8.5,10]]))
+print ("SVR predicate [0.5,0.8] : " , my_model.predict([[0.5,0.8]]))
+print ("SVR predicate [8.5,10] : " , my_model.predict([[8.5,10]]))
 
 
 plt.scatter(my_input[:,0] , my_input[:,1],c=my_output)
